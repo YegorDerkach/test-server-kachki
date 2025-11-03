@@ -3,7 +3,7 @@ services:
     name: web-kachki-server
     env: docker
     dockerfilePath: ./web-kachki-server/server/Dockerfile
-    dockerContext: ./web-kachki-server/server
+    dockerContext: .
     plan: free
     region: frankfurt
     autoDeploy: true

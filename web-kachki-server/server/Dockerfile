@@ -6,11 +6,11 @@ FROM maven:3.9-eclipse-temurin-17 AS build
 WORKDIR /app
 
 # Копіюємо pom.xml та завантажуємо залежності (кешування)
-COPY pom.xml .
+COPY web-kachki-server/server/pom.xml .
 RUN mvn dependency:go-offline -B
 
 # Копіюємо вихідний код
-COPY src ./src
+COPY web-kachki-server/server/src ./src
 
 # Білд проекту
 RUN mvn clean package -DskipTests
