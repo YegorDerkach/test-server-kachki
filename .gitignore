@@ -1,0 +1,48 @@
+# Maven
+**/target/
+**/.mvn/
+**/mvnw
+**/mvnw.cmd
+**/.mvn/wrapper/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.ipr
+*.iws
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# GCP Credentials (не завантажувати!)
+*.json
+!package.json
+**/web-kachki-*.json
+
+# Build artifacts
+*.class
+*.jar
+!**/mvnw
+!**/mvnw.cmd
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
+
+# Spring Boot
+application-local.properties
+application-dev.properties
+
