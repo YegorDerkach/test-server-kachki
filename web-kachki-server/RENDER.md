@@ -10,9 +10,13 @@
 
 ### Крок 2: Налаштування Build & Deploy
 
+**⚠️ ВАЖЛИВО:** Після підключення репозиторію, Render може автоматично визначити проект як Node.js. **Обов'язково змініть Environment на Java!**
+
 **Name:** `web-kachki-server` (або будь-яка назва)
 
-**Environment:** `Java`
+**Environment:** **`Java`** (НЕ Node.js! Якщо бачите Node.js - змініть на Java!)
+
+**Root Directory:** (залиште порожнім або вкажіть `web-kachki-server/server` якщо потрібно)
 
 **Build Command:**
 ```bash
@@ -23,6 +27,10 @@ cd web-kachki-server/server && chmod +x mvnw && ./mvnw clean package -DskipTests
 ```bash
 cd web-kachki-server/server && java -jar target/web-kachki-server-0.0.1-SNAPSHOT.jar
 ```
+
+**Якщо використовуєте Root Directory = `web-kachki-server/server`:**
+- Build Command: `chmod +x mvnw && ./mvnw clean package -DskipTests`
+- Start Command: `java -jar target/web-kachki-server-0.0.1-SNAPSHOT.jar`
 
 ### Крок 3: Налаштування змінних оточення (Environment Variables)
 
