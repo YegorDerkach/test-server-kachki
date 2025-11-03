@@ -1,9 +1,9 @@
 services:
   - type: web
     name: web-kachki-server
-    env: java
-    buildCommand: cd web-kachki-server/server && chmod +x mvnw && ./mvnw clean package -DskipTests
-    startCommand: cd web-kachki-server/server && java -jar target/web-kachki-server-0.0.1-SNAPSHOT.jar
+    env: docker
+    dockerfilePath: ./web-kachki-server/server/Dockerfile
+    dockerContext: ./web-kachki-server/server
     plan: free
     region: frankfurt
     autoDeploy: true
