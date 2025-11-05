@@ -1,0 +1,82 @@
+@use "/src/sass/basic/variabels.scss" as *;
+
+.promo {
+    &__wrapper {
+        position: relative;
+        background: url("/src/img/bg/bg.png") center center / cover no-repeat;
+        background: $purple;
+        padding: 180px 0 280px 0;
+    }
+
+    &__img {
+        position: absolute;
+        z-index: 150;
+        width: 800px;
+        height: 450px;
+        bottom: 150px;
+        right: 150px;
+        object-fit: contain;
+    }
+
+    &__title {
+        position: relative;
+        color: $white;
+        font-size: 128px;
+        font-weight: 400;
+        line-height: 140%;
+        z-index: 100;
+
+
+        span {
+            text-transform: uppercase;
+            color: red;
+        }
+
+    }
+
+    &__buttons {
+        margin-top: 108px;
+        display: flex;
+        column-gap: 50px;
+
+    }
+
+    &__moving {
+        color: $white;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 100%;
+        background-color: $chaorit;
+        border: 2px solid $chaorit;
+        padding: 13px 15px;
+        cursor: pointer;
+        z-index: 100;
+
+        span {
+            padding-left: 15px;
+        }
+    }
+
+    &__browse {
+        color: $black;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 100%;
+        border: 2px solid $chaorit;
+        border-radius: 5px;
+        background: $white;
+        padding: 13px 23px;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    &__opacity {
+        z-index: 20;
+        position: absolute;
+        width: 85%;
+        height: 510px;
+        background: rgba(92, 77, 125, 1);
+        opacity: 1;
+        top: 82px;
+    }
+}

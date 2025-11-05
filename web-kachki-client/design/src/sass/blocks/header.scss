@@ -1,0 +1,98 @@
+@use "/src/sass/basic/variabels.scss" as *;
+
+.header {
+    width: 100%;
+    padding: 10px 0;
+    background: linear-gradient(180.00deg, rgba(92, 77, 125, 1), rgba(79.5903091430664, 65.87185668945312, 107.88461303710938, 1) 100%);
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 200px;
+        height: 100px;
+        background-color: $white;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+
+        ul {
+            display: flex;
+            gap: 15px;
+            padding: 0;
+
+            li {
+                list-style: none;
+
+                a {
+                    color: $white;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 100%;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 15px;
+    }
+
+
+    &__button {
+
+        &-in {
+            padding: 11px 25px;
+            color: $white;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 100%;
+            border: 1px solid $black;
+            border-radius: 25px;
+            background-color: transparent;
+            cursor: pointer;
+            transition: background-color 0.4s;
+        }
+
+        &-up {
+            padding: 11px 25px;
+            color: $white;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 100%;
+            border: 1px solid $black;
+            border-radius: 25px;
+            background-color: $black;
+            cursor: pointer;
+            transition: all 0.4s;
+        }
+    }
+
+    &__user {
+        display: none; // поміняти на flex, а &__buttons  зробити none
+        margin-left: 57px;
+        align-items: center;
+        gap: 30px;
+
+        &-name {
+            color: $white;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 100%;
+        }
+
+        &-photo {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+    }
+}
